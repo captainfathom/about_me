@@ -6,6 +6,10 @@
   position: relative;
   text-align: center;
   border: 3px solid #000000;
+  margin: 30px auto;
+  width: 400px;
+  left: 100%;
+  opacity: 0.6;
 }
 #userStory {
   font-size: 22px;
@@ -16,17 +20,21 @@
   position: static;
   text-align: center;
   display: block;
-  border: 5px solid #000000;
   margin: 5px auto;
+
 
 }
 .textBox{
-  position: static;
+  position: absolute;
   background-color: white;
   border: 5px solid #000000;
   text-align: center;
   width: 50%;
   margin: 20px auto;
+  float: auto;
+  right: 30%;
+  height: 1000px;
+  opacity: .6;
 }
 .opener{
   font-size: 18px;
@@ -37,15 +45,39 @@
   position: static;
   text-align: center;
   display: block;
-  border: 5px solid #000000;
   margin: 5px auto;
 
 }
+.topTen{
+  width: 20%;
+  position: fixed;
+  background-color: white;
+  border: 5px solid black;
+  right: 20px;
+  margin: 20px auto;
+  opacity: 0.6;
+}
+h2{
+  text-align: center;
+}
+.sideBar{
+  background-color: white;
+  corder: 5px solid black;
+  position: fixed;
+  height: 800px;
+  border: 5px solid black;
+  opacity: 0.6;
+  font-family: Georgia;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
 body {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Question_mark.png');
+  background-image: url('http://bgfons.com/upload/lines_texture1095.jpg');
   background-color: #226666;
   background-blend-mode: lighten;
-  background-size: 10%;
+  background-size: 100%;
+  display: inline-block;
 }
 div #userStory {
   text-align: center;
