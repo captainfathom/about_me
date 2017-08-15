@@ -71,16 +71,19 @@ function score(){
     qlog.push(questionsArray[5]);
     var numberAnswer = Math.floor(Math.random() * 100);
     console.log(numberAnswer);
+    var tries = 3;
     var i = 0;
-    for (i = 0; i < 4; i++){
+    for (i = 0; i < tries; i++){
       answer = prompt(questionsArray[5]);
       console.log(answer);
       answerlog.push(answer);
       if (numberAnswer > answer){
-        alert(alertLog[2].join((3 - i)));
+        alert(alertLog[2].join((tries - 1)));
+        tries--;
       }
       else if (numberAnswer < answer){
-        alert(alertLog[3].join((3 - i)));
+        alert(alertLog[3].join((tries - 1)));
+        tries--;
       }
       else if (answer == numberAnswer){
         correctAns++;
@@ -92,7 +95,7 @@ function score(){
       }
     }
     qlog.push(questionsArray[6]);
-    var numTries = 7;
+    var numTries = 6;
     for (i = 0; i < numTries; i++){
       answer = prompt(questionsArray[6]).toUpperCase();
       console.log(answer);
@@ -103,8 +106,9 @@ function score(){
         alert(alertLog[6] + alertLog[7].join(', '));
         break;
       }
-      else if (i < (numTries - 1)){
-        alert(alertLog[8].join(((numTries - 1) - i)));
+      else if (i < numTries){
+        alert(alertLog[8].join(numTries - i));
+        numTries++;
       }
       else {
         alert(alertLog[9] + alertLog[7].join(', '));
@@ -116,7 +120,7 @@ function score(){
     console.log(qlog);
     // var Congratulations = alertLog[10].join(name);
     alert(alertLog[10][0].join(name) + alertLog[10][1].join(correctAns));
-    }
-  global();
   }
+  global();
+}
 score();
